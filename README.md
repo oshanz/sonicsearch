@@ -1,6 +1,6 @@
 # Sonicsearch
 
-[![Build Status](https://travis-ci.org/oshanz/sonicsearch.svg?branch=master)](https://travis-ci.org/oshanz/sonicsearch)  
+[![Build Status](https://travis-ci.org/oshanz/sonicsearch.svg?branch=master)](https://travis-ci.org/oshanz/sonicsearch) [![Code Climate](https://codeclimate.com/github/oshanz/sonicsearch/badges/gpa.svg)](https://codeclimate.com/github/oshanz/sonicsearch)  
 Rails friendly driver for the sonic search backend.  
 This is a very early stage of the package, bugfixes and api changes are welcome
 
