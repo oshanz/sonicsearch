@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'sonicsearch/version'
@@ -35,8 +37,9 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.5'
 
   spec.add_dependency 'activemodel', '>= 4.2'
-  spec.add_dependency 'connection_pool', '~> 2.2'
-  spec.add_dependency 'net_tcp_client', '~> 2.2'
+  spec.add_dependency 'async-io', '~> 1.20'
+  # spec.add_dependency 'connection_pool', '~> 2.2'
+  # spec.add_dependency 'concurrent-ruby', '~> 1.1'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 10.0'
