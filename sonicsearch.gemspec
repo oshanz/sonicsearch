@@ -7,9 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = Sonicsearch::VERSION
   spec.authors       = ['Oshan Wisumperuma']
   spec.email         = ['warunaoshan@gmail.com']
-
+  spec.license       = 'MPL-2.0'
   spec.summary       = 'Sonic search server integrations for Ruby on Rails'
-  spec.description   = ''
   spec.homepage      = 'https://github.com/oshanz/sonicsearch'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -18,7 +17,7 @@ Gem::Specification.new do |spec|
     spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
     spec.metadata['homepage_uri'] = spec.homepage
     spec.metadata['source_code_uri'] = spec.homepage
-    spec.metadata['changelog_uri'] = "https://github.com/oshanz/sonicsearch/CHANGELOG.md"
+    spec.metadata['changelog_uri'] = 'https://github.com/oshanz/sonicsearch/CHANGELOG.md'
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
       'public gem pushes.'
@@ -32,6 +31,11 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.required_ruby_version = '>= 2.5'
+
+  spec.add_dependency 'activemodel', '>= 4.2'
+  spec.add_dependency 'faraday', '~> 0.9.2'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 10.0'
