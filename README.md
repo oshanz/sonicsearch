@@ -18,7 +18,7 @@ And then execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+- sonarsearch will always try to maintain the API compatibility with [searchkick](https://github.com/ankane/searchkick), so you can switch between search engines with less effort as your requirements.
 
 ## Development
 
