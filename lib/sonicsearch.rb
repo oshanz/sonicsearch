@@ -1,4 +1,4 @@
-require "sonicsearch/version"
+require 'sonicsearch/version'
 
 module Sonicsearch
   class Error < StandardError; end
