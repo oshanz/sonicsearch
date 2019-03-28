@@ -7,7 +7,7 @@ module Sonicsearch
     end
 
     def trigger(action)
-      tcp_client = connection.connect do |peer|
+      connection.connect do |peer|
         peer.write("TRIGGER #{action}")
         message = peer.read(512)
 
