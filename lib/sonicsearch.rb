@@ -2,8 +2,18 @@
 
 require 'sonicsearch/version'
 require 'async/io'
+require 'active_support'
+require 'sonicsearch/model'
+require 'active_model/callbacks'
+
 module Sonicsearch
   class Error < StandardError; end
+
+  class << self
+    attr_accessor :model_options
+ end
+
+  self.model_options = {}
 
   class ChannelFactory
     def search_channel
@@ -31,4 +41,10 @@ module Sonicsearch
       # tcp_clien.send('QUIT')
     end
   end
+end
+
+ActiveModel::Callbacks.include(Sonicsearch::Model)
+
+ActiveSupport.on_load(:active_record) do
+  extend Sonicsearch::Model
 end
